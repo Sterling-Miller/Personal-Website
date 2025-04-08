@@ -1,6 +1,9 @@
 # astro
 .astro
 
+# vsscode
+.vscode/
+
 # build output
 dist/
 .output/
