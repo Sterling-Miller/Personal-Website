@@ -1,0 +1,80 @@
+<div class="profile">
+    <img 
+        src="src/assets/images/image.jpg" 
+        alt="Sterling Miller" 
+        class="profile-image" 
+    />
+    <h1 class="profile-name">Sterling Miller</h1>
+    <p class="profile-title">Aspiring Software Engineer</p>
+    <p class="profile-location">📍Located in San Mateo, CA</p>
+    <div class="profile-links">
+        <a href="/src/assets/files/resume.pdf" download class="resume-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Download" class="icon" />
+            Resume
+        </a>
+        <a href="mailto:stermiller11@gmail.com" target="_blank" class="icon-link">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/maildotru.svg" alt="Email" class="icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/stermiller11" target="_blank" class="icon-link">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="icon" />
+        </a>
+        <a href="https://github.com/Sterling-Miller" target="_blank" class="icon-link">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="icon" />
+        </a>
+    </div>
+</div>
+
+<style>
+    .profile {
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+    }
+
+    .profile-name {
+        margin: 0.5rem 0;
+    }
+
+    .profile-title,
+    .profile-location {
+        margin: 0.25rem 0;
+        color: gray;
+    }
+
+    .profile-links {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .resume-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border: 1px solid #007acc;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon-link .icon {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+</style>
