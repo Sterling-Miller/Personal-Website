@@ -1,52 +1,144 @@
 <!-- About Me Component -->
-
-<div class="about me">
-    <h2>About Me</h2>
-    <p>I'm a soon-to-be graduate from the University of Oregon, earning a Bachelor of Science in Computer Science with a minor in Psychology. I'm passionate about software development and eager to apply my skills to real-world challenges in the tech industry.</p>
-    <h2>🔧 Skills & Interests</h2>
-    <ul>
-        <li><strong>Languages:</strong></li>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            {['Python', 'C', 'C++', 'JavaScript', 'TypeScript'].map((tech) => (
-            <div class="languages">
-                <strong>{tech}</strong>
-            </div>
-            ))}
+<div class="about">
+  <h1>About Me</h1>
+  <p>
+    I'm a soon-to-be graduate from the University of Oregon, earning a Bachelor
+    of Science in Computer Science with a minor in Psychology. I'm passionate
+    about software development and eager to apply my skills to real-world
+    challenges in the tech industry.
+  </p>
+  <h1>Skills & Interests</h1>
+  <li><strong>Languages:</strong></li>
+  <div>
+    {
+      ["Python", "C", "C++", "JavaScript", "TypeScript"].map((tech) => (
+        <div class="languages">
+          {" "}
+          <strong>{tech}</strong>{" "}
         </div>
-        <li><strong>Frameworks:</strong></li>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            {['ReactJS', 'NodeJS', 'NextJS', 'Flask', 'Firebase', 'Vite', 'Vercel', 'CSS', 'HTML'].map((tech) => (
-            <div class="frameworks">
-                <strong>{tech}</strong>
-            </div>
-            ))}
+      ))
+    }
+  </div>
+  <li><strong>Frameworks:</strong></li>
+  <div>
+    {
+      ["Next.js", "Astro", "Tailwind CSS", "Flask"].map((tech) => (
+        <div class="frameworks">
+          <strong>{tech}</strong>
         </div>
-        <li><strong>Other Areas of Experience:</strong> Software engineering, network & system security, operating systems, machine learning, system modeling</li>
-        <li><strong>Soft Skills:</strong> Collaborative development, project planning, testing, deployment</li>
-    </ul>
+      ))
+    }
+  </div>
+  <li><strong>Backend:</strong></li>
+  <div>
+    {
+      ["Firebase", "NextAuth.js", "Drizzle ORM"].map((tech) => (
+        <div class="backend">
+          <strong>{tech}</strong>
+        </div>
+      ))
+    }
+  </div>
+  <li><strong>Frontend:</strong></li>
+  <div>
+    {
+      ["React", "Node.js", "Material UI"].map((tech) => (
+        <div class="frontend">
+          <strong>{tech}</strong>
+        </div>
+      ))
+    }
+  </div>
+  <li><strong>Databases:</strong></li>
+  <div>
+    {
+      ["Firebase Firestore", "Neon Postgress", "MongoDB"].map((tech) => (
+        <div class="database">
+          <strong>{tech}</strong>
+        </div>
+      ))
+    }
+  </div>
+  <li><strong>Other Areas of Experience:</strong></li>
+  <div>
+    {
+      [
+        "Software Engineering",
+        "Network & System Security",
+        "Machine Learning",
+        "Systems Modeling",
+      ].map((tech) => (
+        <div class="other">
+          <strong>{tech}</strong>
+        </div>
+      ))
+    }
+  </div>
 </div>
 
 <style>
-    .about {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 1rem;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-    }
+  .about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
 
-    .languages {
-        background-color: lightblue;
-        padding: 0.5rem;
-        border-radius: 5px;
-        margin: 0.5rem 0;
-    }
+  .about div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
-    .frameworks {
-        background-color: lightgreen;
-        padding: 0.5rem;
-        border-radius: 5px;
-        margin: 0.5rem 0;
-    }
+  .about li {
+    list-style: none;
+    margin: 0.5rem 0;
+  }
 
+  .languages,
+  .frameworks,
+  .backend,
+  .frontend,
+  .database,
+  .other {
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: content-box;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 2px 12px;
+    margin-bottom: 0.5rem;
+  }
+
+  .languages {
+    color: #4b84ee;
+    background-color: #233454;
+  }
+
+  .frameworks {
+    color: #ff7f50;
+    background-color: #2e2e2e;
+  }
+
+  .backend {
+    color: #32cd32;
+    background-color: #1e3a3a;
+  }
+
+  .frontend {
+    color: #ffa500;
+    background-color: #3a2e1e;
+  }
+
+  .database {
+    color: #ff69b4;
+    background-color: #3a1e2e;
+  }
+
+  .other {
+    color: #9370db;
+    background-color: #2e1e3a;
+  }
 </style>
