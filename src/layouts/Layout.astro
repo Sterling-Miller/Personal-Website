@@ -20,10 +20,12 @@ const { title } = Astro.props as Props;
 			<div class="left-column">
 				<slot name="left" />
 			</div>
+
 			<div class="right-column">
 				<slot name="right" />
 			</div>
 		</div>
+
 		<div class="theme-switcher">
 			<button id="theme-toggle">Toggle</button>
 		</div>
@@ -41,7 +43,6 @@ const { title } = Astro.props as Props;
 				});
 			}
 
-            // Load saved theme from localStorage
             const savedTheme = localStorage.getItem('theme') || 'light';
             rootElement.classList.add(savedTheme);
         </script>
@@ -53,7 +54,7 @@ const { title } = Astro.props as Props;
         --color-text-light: hsl(0, 0%, 10%);
         --color-bg-light: hsl(0, 0%, 100%);
         --color-text-dark: hsl(0, 0%, 100%);
-        --color-bg-dark: hsl(0, 0%, 10%);
+        --color-bg-dark: hsl(0, 0%, 5%);
     }
 
 	html.light {
@@ -98,19 +99,17 @@ const { title } = Astro.props as Props;
 	}
 
 	.left-column {
-		position: fixed;
-		top: 1rem;
-		left: 5rem;
-		box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+		flex: 1;
+		margin-top: 5rem;
+		margin-left: 10rem;
+		overflow-y: auto;
 	}
 
 	.right-column {
-		margin-left: 30vw;
-		padding: 1rem;
+		flex: 4;
 		height: 100%;
 		overflow-y: auto;
 		background-color: var(--color-bg);
-		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 	}
 
 	@media (max-width: 768px) {
@@ -122,7 +121,6 @@ const { title } = Astro.props as Props;
 			position: static;
 			width: 100%;
 			height: auto;
-			box-shadow: none;
 		}
 
 		.right-column {

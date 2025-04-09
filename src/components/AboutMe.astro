@@ -1,14 +1,29 @@
+<!-- About Me Component -->
+
 <div class="about me">
     <h2>About Me</h2>
-    <p>
-        I'm a software engineer with a passion for building web applications. I love working with modern technologies and frameworks to create efficient and user-friendly solutions.
-    </p>
-    <p>
-        In my free time, I enjoy exploring new programming languages, contributing to open-source projects, and sharing my knowledge through blogging and speaking at tech events.
-    </p>
-    <p>
-        Feel free to connect with me on social media or check out my GitHub profile for my latest projects!
-    </p>
+    <p>I'm a soon-to-be graduate from the University of Oregon, earning a Bachelor of Science in Computer Science with a minor in Psychology. I'm passionate about software development and eager to apply my skills to real-world challenges in the tech industry.</p>
+    <h2>🔧 Skills & Interests</h2>
+    <ul>
+        <li><strong>Languages:</strong></li>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            {['Python', 'C', 'C++', 'JavaScript', 'TypeScript'].map((tech) => (
+            <div class="languages">
+                <strong>{tech}</strong>
+            </div>
+            ))}
+        </div>
+        <li><strong>Frameworks:</strong></li>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            {['ReactJS', 'NodeJS', 'NextJS', 'Flask', 'Firebase', 'Vite', 'Vercel', 'CSS', 'HTML'].map((tech) => (
+            <div class="frameworks">
+                <strong>{tech}</strong>
+            </div>
+            ))}
+        </div>
+        <li><strong>Other Areas of Experience:</strong> Software engineering, network & system security, operating systems, machine learning, system modeling</li>
+        <li><strong>Soft Skills:</strong> Collaborative development, project planning, testing, deployment</li>
+    </ul>
 </div>
 
 <style>
@@ -20,12 +35,18 @@
         line-height: 1.6;
     }
 
-    h2 {
-        color: #333;
+    .languages {
+        background-color: lightblue;
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin: 0.5rem 0;
     }
 
-    p {
-        margin-bottom: 1rem;
-        color: #555;
+    .frameworks {
+        background-color: lightgreen;
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin: 0.5rem 0;
     }
+
 </style>

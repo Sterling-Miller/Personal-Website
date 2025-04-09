@@ -17,10 +17,6 @@ export const prerender = true;
 </Layout>
 
 <style>
-    :root {
-        --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-    }
-
     h1 {
         margin: 2rem 0;
     }
@@ -29,97 +25,5 @@ export const prerender = true;
         margin: auto;
         padding: 1em;
         max-width: 60ch;
-    }
-
-    .text-gradient {
-        font-weight: 900;
-        background-image: var(--astro-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 100% 200%;
-        background-position-y: 100%;
-        border-radius: 0.4rem;
-        animation: pulse 4s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-        0%,
-        100% {
-            background-position-y: 0%;
-        }
-        50% {
-            background-position-y: 80%;
-        }
-    }
-
-    .instructions {
-        line-height: 1.6;
-        margin: 1rem 0;
-        background: #4f39fa;
-        padding: 1rem;
-        border-radius: 0.4rem;
-        color: var(--color-bg);
-    }
-
-    .instructions code {
-        font-size: 0.875em;
-        border: 0.1em solid var(--color-border);
-        border-radius: 4px;
-        padding: 0.15em 0.25em;
-    }
-
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 1rem;
-        padding: 0;
-    }
-
-    .profile-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 0.5rem;
-    }
-
-    .profile-name {
-        margin: 0.5rem 0;
-    }
-
-    .profile-title,
-    .profile-location {
-        margin: 0.25rem 0;
-        color: gray;
-    }
-
-    .profile-links {
-        margin-top: 1rem;
-        display: flex;
-        gap: 0.5rem;
-    }
-
-    .resume-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        text-decoration: none;
-        color: #007acc;
-        font-weight: bold;
-        padding: 0.5rem 1rem;
-        border: 1px solid #007acc;
-        border-radius: 4px;
-        background-color: transparent;
-    }
-
-    .icon {
-        width: 16px;
-        height: 16px;
-    }
-
-    .icon-link .icon {
-        width: 24px;
-        height: 24px;
-        fill: currentColor;
     }
 </style>
