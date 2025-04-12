@@ -1,0 +1,17 @@
+/* This file is used to define the layout and appearance of the main page. */
+
+h1 {
+  margin: 2rem 0;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  margin: auto;
+  padding: 1em;
+  max-width: 60ch;
+}

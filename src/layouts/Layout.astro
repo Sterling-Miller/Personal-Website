@@ -1,132 +1,32 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="left-column">
-			<slot name="left" />
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  
+  <body>
+    <div class="left-column">
+      <slot name="left" />
+    </div>
 
-		<div class="right-column">
-			<slot name="right" />
-		</div>
-
-		<div class="theme-switcher">
-			<button id="theme-toggle">Toggle</button>
-		</div>
-		<script>
-            const themeToggle = document.getElementById('theme-toggle');
-            const rootElement = document.documentElement;
-
-			if (themeToggle) {
-				themeToggle.addEventListener('click', () => {
-					const currentTheme = rootElement.classList.contains('dark') ? 'dark' : 'light';
-					const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-					rootElement.classList.remove(currentTheme);
-					rootElement.classList.add(newTheme);
-					localStorage.setItem('theme', newTheme);
-				});
-			}
-
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            rootElement.classList.add(savedTheme);
-        </script>
-	</body>
+    <div class="right-column">
+      <slot name="right" />
+    </div>
+  </body>
 </html>
 
 <style>
-	:root {
-        --color-text-light: hsl(0, 0%, 10%);
-        --color-bg-light: hsl(0, 0%, 100%);
-        --color-text-dark: hsl(0, 0%, 100%);
-        --color-bg-dark: hsl(0, 0%, 5%);
-    }
-
-	html.light {
-        --color-text: var(--color-text-light);
-        --color-bg: var(--color-bg-light);
-    }
-
-	html.dark {
-        --color-text: var(--color-text-dark);
-        --color-bg: var(--color-bg-dark);
-    }
-
-	body {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		font-family: system-ui, sans-serif;
-		font-size: var(--font-size-base);
-		color: var(--color-text);
-		background-color: var(--color-bg);
-	}
-	
-	.theme-switcher {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-    }
-
-	#theme-toggle {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        cursor: pointer;
-        background: var(--color-bg);
-        color: var(--color-text);
-        border: 1px solid var(--color-text);
-        border-radius: 4px;
-    }
-
-	.left-column {
-		margin-top: 5rem;
-		margin-inline: auto;
-		overflow: visible;
-	}
-
-	.right-column {
-		margin-inline: auto;
-		overflow-y: auto;
-	}
-
-	@media (max-width: 750px) {
-		body {
-			flex-direction: column;
-		}
-
-		.left-column, .right-column {
-			width: 100%;
-			margin: 0;
-			overflow: visible;
-		}
-
-		.left-column {
-			margin-bottom: 1rem;
-		}
-	}
-
-	h1 {
-		font-size: var(--font-size-xl);
-	}
-
-	h2 {
-		font-size: var(--font-size-lg);
-	}
-
-	code {
-		font-family: Menlo, Monaco, Consolas, monospace;
-	}
+  @import "../styles/layout.css";
 </style>
