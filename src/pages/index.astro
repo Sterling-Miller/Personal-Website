@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Profile from "../components/Profile.astro";
 import About from "../components/About.astro";
 import Education from "../components/Education.astro";
+import Projects from "../components/Projects.astro";
 
 export const prerender = true;
 ---
@@ -15,5 +16,6 @@ export const prerender = true;
   <div slot="right">
     <About />
     <Education />
+    <Projects />
   </div>
 </Layout>

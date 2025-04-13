@@ -1,81 +1,64 @@
 <!-- About Me Component -->
-<div class="about">
-  <h1>About Me</h1>
-  <p>
+<div class="max-w-3xl mx-auto p-4 font-sans leading-relaxed">
+  <h1 class="text-3xl font-bold mb-6">About Me</h1>
+  <p class="mb-6">
     I'm a soon-to-be graduate from the University of Oregon, earning a Bachelor
     of Science in Computer Science with a minor in Psychology. I'm passionate
     about software development and eager to apply my skills to real-world
     challenges in the tech industry.
   </p>
-  <h1>Skills & Interests</h1>
-  <li><strong>Languages:</strong></li>
-  <div>
-    {
-      ["Python", "C", "C++", "JavaScript", "TypeScript"].map((tech) => (
-        <div class="languages">
-          {" "}
-          <strong>{tech}</strong>{" "}
-        </div>
-      ))
-    }
+  <h1 class="text-3xl font-bold mb-6">Skills & Interests</h1>
+  <li class="list-none mb-2 font-semibold">Languages:</li>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {["Python", "C", "C++", "JavaScript", "TypeScript"].map((tech) => (
+      <div class="languages text-blue-400 bg-blue-900 rounded-lg px-3 py-1 text-sm font-medium">
+        {tech}
+      </div>
+    ))}
   </div>
-  <li><strong>Frameworks:</strong></li>
-  <div>
-    {
-      ["Next.js", "Astro", "Tailwind CSS", "Flask"].map((tech) => (
-        <div class="frameworks">
-          <strong>{tech}</strong>
-        </div>
-      ))
-    }
+  <li class="list-none mb-2 font-semibold">Frameworks:</li>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {["Next.js", "Astro", "Tailwind CSS", "Flask"].map((tech) => (
+      <div class="frameworks text-red-400 bg-red-900 rounded-lg px-3 py-1 text-sm font-medium">
+        {tech}
+      </div>
+    ))}
   </div>
-  <li><strong>Backend:</strong></li>
-  <div>
-    {
-      ["Firebase", "NextAuth.js", "Drizzle ORM"].map((tech) => (
-        <div class="backend">
-          <strong>{tech}</strong>
-        </div>
-      ))
-    }
+  <li class="list-none mb-2 font-semibold">Backend:</li>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {["Firebase", "NextAuth.js", "Drizzle ORM"].map((tech) => (
+      <div class="backend text-green-400 bg-green-800 rounded-lg px-3 py-1 text-sm font-medium">
+        {tech}
+      </div>
+    ))}
   </div>
-  <li><strong>Frontend:</strong></li>
-  <div>
-    {
-      ["React", "Node.js", "Material UI"].map((tech) => (
-        <div class="frontend">
-          <strong>{tech}</strong>
-        </div>
-      ))
-    }
+  <li class="list-none mb-2 font-semibold">Frontend:</li>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {["React", "Node.js", "Material UI"].map((tech) => (
+      <div class="frontend text-purple-400 bg-purple-900 rounded-lg px-3 py-1 text-sm font-medium">
+        {tech}
+      </div>
+    ))}
   </div>
-  <li><strong>Databases:</strong></li>
-  <div>
-    {
-      ["Firebase Firestore", "Neon Postgress", "MongoDB"].map((tech) => (
-        <div class="database">
-          <strong>{tech}</strong>
-        </div>
-      ))
-    }
+  <li class="list-none mb-2 font-semibold">Databases:</li>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {["Firebase Firestore", "Neon Postgress", "MongoDB"].map((tech) => (
+      <div class="database text-yellow-400 bg-yellow-800 rounded-lg px-3 py-1 text-sm font-medium">
+        {tech}
+      </div>
+    ))}
   </div>
-  <li><strong>Other Areas of Experience:</strong></li>
-  <div>
-    {
-      [
-        "Software Engineering",
-        "Network & System Security",
-        "Machine Learning",
-        "Systems Modeling",
-      ].map((tech) => (
-        <div class="other">
-          <strong>{tech}</strong>
-        </div>
-      ))
-    }
+  <li class="list-none mb-2 font-semibold">Other Areas of Experience:</li>
+  <div class="flex flex-wrap gap-2">
+    {[
+      "Software Engineering",
+      "Network & System Security",
+      "Machine Learning",
+      "Systems Modeling",
+    ].map((tech) => (
+      <div class="other text-gray-400 bg-gray-800 rounded-lg px-3 py-1 text-sm font-medium">
+        {tech}
+      </div>
+    ))}
   </div>
 </div>
-
-<style>
-  @import "../styles/about.css";
-</style>

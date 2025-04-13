@@ -1,0 +1,35 @@
+---
+const projects = [
+    {
+        title: "1.5fa Demo",
+        description: "This project has implementations of two kinds of authentication methods. The first is a traditional username/password form with a email 2FA code. The second is a QR code based authentication method which relies on a secondary device (typically a users phone) to be authenticated.",
+        link: "https://github.com/Sterling-Miller/1.5fa-demo"
+    },
+    {
+        title: "DogLog",
+        description: "DOGLOG is a web application that allows users to track their dog's health and wellness. Users can log their dog's bathroom habbits, meals, and exercise. The application provides a map to see where your dog has logged events as well as a list view to see all events. We have a profile page that allows users to see their dog's information and update it. Also on the profile page, users can see their dog's wellness statistics and earn achievements for logging events.",
+        link: "https://github.com/leoschonberger/doglog-new"
+    }
+];
+---
+
+<div class="max-w-3xl mx-auto p-4 font-sans leading-relaxed">
+    <h2 class="text-3xl font-bold mb-6">Projects</h2>
+    <div class="grid grid-cols-1 gap-6">
+        {projects.map(project => (
+            <div class="flex flex-grow bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px]">
+                <div>
+                    <h3 class="mb-2 font-semibold m-0 py-2 text-white">
+                        {project.title}
+                    </h3>
+                    <p class="text-[#aaa] text-sm mb-4">
+                        {project.description}
+                    </p>
+                    <a href={project.link} target="_blank" class="mt-auto py-2 text-[#aaa] text-sm cursor-pointer hover:text-[#fff] transition-colors duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
