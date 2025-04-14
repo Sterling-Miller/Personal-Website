@@ -1,40 +1,48 @@
-# Astro
+# Personal Website
 
-This directory is a brief example of an [Astro](https://astro.build/) site that can be deployed to Vercel with zero configuration. This demo showcases:
+This is a personal portfolio website built using [Astro](https://astro.build/), a modern static site generator. The website showcases my profile, work experience, education, and projects. It is designed to be fast, responsive, and easily deployable to platforms like [Vercel](https://vercel.com/).
 
-- `/` - A static page (pre-rendered)
-- `/ssr` - A page that uses server-side rendering (through [Vercel Functions](https://vercel.com/docs/functions))
-- `/ssr-with-swr-caching` - Similar to the previous page, but also caches the response on the [Vercel Edge Network](https://vercel.com/docs/edge-network/overview) using `cache-control` headers
-- `/image` - Astro [Asset](https://docs.astro.build/en/guides/images/) using Vercel [Image Optimization](https://vercel.com/docs/image-optimization)
+## Tech Stack
 
-Learn more about [Astro on Vercel](https://vercel.com/docs/frameworks/astro).
+- **Framework**: Astro for building the website.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for responsive and modern design.
+- **Deployment**: Vercel for hosting and server-side rendering.
+- **Other Tools**:
+  - [Prettier](https://prettier.io/) with [Astro's plugin](https://github.com/withastro/prettier-plugin-astro) for code formatting.
 
-## Deploy Your Own
+## Template
 
-Deploy your own Astro project with Vercel.
+This project is based on an Astro template provided by Vercel. The template has been customized to include my personal content and design preferences. Deploy your own Astro project using Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/astro&template=astro)
 
 _Live Example: https://astro-template.vercel.app_
 
-## Project Structure
+## Getting Started
 
-Astro looks for `.astro`, `.md`, or `.js` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Follow these steps to set up and run the project locally:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+### Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [bun](https://bun.sh/) (preferred package manager)
 
-## Commands
+### Installation
 
-All commands are run from the root of the project, from a terminal:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/personal-website.git
+   cd personal-website
+   ```
 
-| Command                 | Action                                             |
-| :---------------------- | :------------------------------------------------- |
-| `pnpm install`          | Installs dependencies                              |
-| `pnpm run dev`          | Starts local dev server at `localhost:3000`        |
-| `pnpm run build`        | Build your production site to `./dist/`            |
-| `pnpm run preview`      | Preview your build locally, before deploying       |
-| `pnpm run start`        | Starts a production dev server at `localhost:3000` |
-| `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `pnpm run astro --help` | Get help using the Astro CLI                       |
+2. Install required dependecies:
+   ```bash
+   bun install
+   ```
+
+3. Run the development enviornment:
+   ```bash
+   bun run dev
+   ```
+
+4. Open [http://localhost:4321/](http://localhost:4321/) in your browser to find page.
