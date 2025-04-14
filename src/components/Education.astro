@@ -4,20 +4,21 @@ const education = [
     degree: "Bachelor of Computer Science",
     institution: "University of Oregon, Eugene, Oregon",
     duration: "September 2019 – Present",
-    logo: "src/assets/images/great-seal-one-color-uo-green-800x800@1x.webp",
+    logo: "https://drive.google.com/thumbnail?id=1iYMWMrNfH7YG5dQlGSeYPNq8m0vUAlFc",
   }
 ];
 ---
 
+<!-- Education Component -->
 <div class="max-w-3xl mx-auto p-4 font-sans leading-relaxed">
   <h1 class="text-3xl font-bold mb-6">Education</h1>
 
   {education.map((edu) => (
     <div
-      class="flex flex-grow bg-[#1e1e1e] p-4 mb-6 border-l-2 border-[#3f3f3f] rounded-[10px]"
+      class="flex flex-grow bg-[#1e1e1e] p-4 mb-6 border-l-2 border-[#3f3f3f] rounded-[10px] text-sm md:text-lg"
     >
       <div
-        class="flex-shrink-0 w-[120px] h-[120px] mr-4 rounded-full overflow-hidden"
+        class="flex-shrink-0 w-[100px] h-[100px] mr-4 rounded-full overflow-hidden"
       >
         <img
           class="w-full h-full object-cover"
@@ -27,7 +28,7 @@ const education = [
       </div>
 
       <div class="edu-info">
-        <h3 class="text-[1.5rem] m-0 py-2 font-bold">
+        <h3 class="m-0 py-2 font-bold text-xl md:text-2xl">
           {edu.degree}
         </h3>
         <div>
