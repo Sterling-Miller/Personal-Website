@@ -44,7 +44,7 @@ const experiences = [
   <div class="grid grid-cols-1 gap-6">
     {
       experiences.map((experience) => (
-        <div class="bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px]">
+        <div class="bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px] transform transition-transform duration-300 hover:translate-y-[-10px]">
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
             <div>
               <h3 class="text-xl font-semibold">{experience.company}</h3>
