@@ -5,6 +5,7 @@ const experiences = [
     location: "Redwood City, CA",
     role: "System Maintenance & Repair Engineer - Seasonal",
     duration: "June 2018 – August 2024",
+    image: "/images/bp-logo.PNG",
     responsibilities: [
       "Performed routine maintenance and troubleshooting on water filtration systems.",
       "Diagnosed issues and executed intermediate electrical and plumbing repairs to restore system functionality.",
@@ -16,6 +17,7 @@ const experiences = [
     location: "San Mateo, CA",
     role: "Sales Associate – Part Time",
     duration: "April 2020 – September 2021",
+    image: "/images/central-computers-logo.jpg",
     responsibilities: [
       "Provided technical support and product recommendations for general and corporate customers.",
       "Effectively communicated complex technical concepts to customers of varying expertise.",
@@ -28,6 +30,7 @@ const experiences = [
     location: "San Mateo, CA / Eugene, OR",
     role: "Crew Member – Part Time",
     duration: "January 2019 – August 2019 / September 2019 – December 2020",
+    image: "/images/trader-joes-logo.png",
     responsibilities: [
       "Maintained store cleanliness, organization, and efficient operations.",
       "Managed inventory, restocked shelves, and optimized product availability.",
@@ -44,23 +47,26 @@ const experiences = [
   <div class="grid grid-cols-1 gap-6">
     {
       experiences.map((experience) => (
-        <div class="bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px] transform transition-transform duration-300 hover:translate-y-[-10px]">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-            <div>
-              <h3 class="text-xl font-semibold">{experience.company}</h3>
-              <p class="text-sm text-zinc-400">{experience.role}</p>
-              <div class="block sm:hidden mt-2">
-                <p class="text-sm text-zinc-400">{experience.location}</p>
-                <p class="text-sm text-zinc-400">{experience.duration}</p>
-              </div>
-            </div>
-            <div class="hidden sm:block text-right pt-2">
-              <p class="text-sm text-zinc-400">{experience.location}</p>
-              <p class="text-sm text-zinc-400">{experience.duration}</p>
-            </div>
+      <div class="bg-[#252525] p-4 border-l-5 border-[#154733] rounded-[10px] transform transition-transform duration-300 hover:translate-y-[-10px] flex items-start">
+        <img src={experience.image} alt={`${experience.company} logo`} class="flex-shrink-0 w-[100px] h-[100px] mr-5 rounded-full" />
+        <div class="flex-1">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+          <div>
+          <h3 class="text-xl font-semibold">{experience.company}</h3>
+          <p class="text-sm text-zinc-400">{experience.role}</p>
+          <div class="block sm:hidden mt-2">
+            <p class="text-sm text-zinc-400">{experience.location}</p>
+            <p class="text-sm text-zinc-400">{experience.duration}</p>
           </div>
-          <ul class="list-disc list-inside space-y-2 mt-4">{experience.responsibilities.map((task) => (<li class="text-sm text-zinc-400">{task}</li>))}</ul>
+          </div>
+          <div class="hidden sm:block text-right pt-2">
+          <p class="text-sm text-zinc-400">{experience.location}</p>
+          <p class="text-sm text-zinc-400">{experience.duration}</p>
+          </div>
         </div>
+        <ul class="list-disc list-inside space-y-2 mt-4">{experience.responsibilities.map((task) => (<li class="text-sm text-zinc-400">{task}</li>))}</ul>
+        </div>
+      </div>
       ))
     }
   </div>
