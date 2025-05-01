@@ -8,8 +8,8 @@ const experiences = [
     responsibilities: [
       "Performed routine maintenance and troubleshooting on water filtration systems.",
       "Diagnosed issues and executed intermediate electrical and plumbing repairs to restore system functionality.",
-      "Assisted in developing maintenance schedules to improve system reliability."
-    ]
+      "Assisted in developing maintenance schedules to improve system reliability.",
+    ],
   },
   {
     company: "Central Computers",
@@ -20,8 +20,8 @@ const experiences = [
       "Provided technical support and product recommendations for general and corporate customers.",
       "Effectively communicated complex technical concepts to customers of varying expertise.",
       "Assembled and tested computer systems to ensure quality performance.",
-      "Assisted with visual merchandising to enhance sales."
-    ]
+      "Assisted with visual merchandising to enhance sales.",
+    ],
   },
   {
     company: "Trader Joe’s",
@@ -33,28 +33,31 @@ const experiences = [
       "Managed inventory, restocked shelves, and optimized product availability.",
       "Provided fast, friendly customer service while handling transactions accurately.",
       "Adapted to shifting priorities in a fast-paced retail environment.",
-      "Assisted with merchandising, stocking, and setting up product displays."
-    ]
-  }
+      "Assisted with merchandising, stocking, and setting up product displays.",
+    ],
+  },
 ];
 ---
 
-<div class="max-w-3xl mx-auto p-4 font-sans leading-relaxed">
+<div class="max-w-4xl mx-auto p-4 font-sans leading-relaxed">
   <h2 class="text-3xl font-bold mb-6">Work Experience</h2>
-
   <div class="grid grid-cols-1 gap-6">
-    {experiences.map((experience) => (
-      <div class= "bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px]">
-        <h3 class="text-xl font-semibold">{experience.company}</h3>
-        <p class="text-sm text-zinc-400">Location: {experience.location}</p>
-        <p class="text-xs text-zinc-400">{experience.role}</p>
-        <p class="text-xs text-zinc-400 mb-4">{experience.duration}</p>
-        <ul class="list-disc list-inside space-y-2">
-          {experience.responsibilities.map((task) => (
-            <li class="text-xs text-zinc-400">{task}</li>
-          ))}
-        </ul>
-      </div>
-    ))}
+    {
+      experiences.map((experience) => (
+        <div class="bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px]">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-semibold">{experience.company}</h3>
+              <p class="text-sm text-zinc-400">{experience.role}</p>
+            </div>
+            <div class="text-right pt-2">
+              <p class="text-sm text-zinc-400">{experience.location}</p>
+              <p class="text-sm text-zinc-400">{experience.duration}</p>
+            </div>
+          </div>
+          <ul class="list-disc list-inside space-y-2 mt-4">{experience.responsibilities.map((task) => (<li class="text-sm text-zinc-400">{task}</li>))}</ul>
+        </div>
+      ))
+    }
   </div>
 </div>

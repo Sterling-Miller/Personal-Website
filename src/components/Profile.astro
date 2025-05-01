@@ -3,7 +3,8 @@ const profile = {
   name: "Sterling Miller",
   title: "Aspiring Software Engineer",
   location: "📍 Located in San Mateo, California",
-  image: "https://drive.google.com/thumbnail?id=1M9c-QN6y2JLPf3PMFEhXROXjMEjgZFRZ",
+  image:
+    "https://drive.google.com/thumbnail?id=1M9c-QN6y2JLPf3PMFEhXROXjMEjgZFRZ",
   resume: {
     link: "/src/assets/files/resume.pdf",
     text: "Resume",
@@ -54,10 +55,7 @@ const profile = {
         viewBox="0 0 512 512"
       >
         <title>{profile.resume.text}</title>
-        <path
-          d={profile.resume.icon}
-        >
-        </path>
+        <path d={profile.resume.icon}> </path>
       </svg>
       <span class="text-2sm">{profile.resume.text}</span>
     </a>

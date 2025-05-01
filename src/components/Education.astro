@@ -1,49 +1,50 @@
 ---
 const education = [
   {
-    degree: "Bachelor of Computer Science",
+    degree: "Bachelor of Science in Computer Science",
     institution: "University of Oregon, Eugene, Oregon",
-    duration: "September 2019 – Present",
+    duration: "September 2019 – June 2025",
     logo: "https://drive.google.com/thumbnail?id=1iYMWMrNfH7YG5dQlGSeYPNq8m0vUAlFc",
-  }
+  },
+];
+
+const course_work = [
+  {
+    title: "Class 1",
+    description: "Description of class 1",
+  },
+  {
+    title: "Class 2",
+    description: "Description of class 2",
+  },
 ];
 ---
 
 <!-- Education Component -->
-<div class="max-w-3xl mx-auto p-4 font-sans leading-relaxed">
+<div class="max-w-4xl mx-auto p-4 font-sans leading-relaxed">
   <h1 class="text-3xl font-bold mb-6">Education</h1>
 
-  {education.map((edu) => (
-    <div
-      class="flex flex-grow bg-[#1e1e1e] p-4 mb-6 border-l-2 border-[#3f3f3f] rounded-[10px] text-sm md:text-lg"
-    >
-      <div
-        class="flex-shrink-0 w-[100px] h-[100px] mr-4 rounded-full overflow-hidden"
-      >
-        <img
-          class="w-full h-full object-cover"
-          src={edu.logo}
-          alt={`${edu.institution} Logo`}
-        />
-      </div>
-
-      <div class="edu-info">
-        <h3 class="m-0 py-2 font-bold text-xl md:text-2xl">
-          {edu.degree}
-        </h3>
-        <div>
-          <p class="text-[#aaa]">
-            {edu.institution}
-          </p>
-          <p class="text-[#aaa]">{edu.duration}</p>
+  {
+    education.map((edu) => (
+      <div class="flex flex-grow bg-[#1e1e1e] p-4 mb-6 border-l-2 border-[#3f3f3f] rounded-[10px] text-sm md:text-lg">
+        <div class="flex-shrink-0 w-[100px] h-[100px] mr-4 rounded-full overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            src={edu.logo}
+            alt={`${edu.institution} Logo`}
+          />
         </div>
-      </div>
 
-      {/* <div
-        class="mt-auto py-2 text-[#aaa] cursor-pointer text-[0.95rem] hover:text-[#fff] transition-colors duration-300 self-end ml-auto"
-      >
-        ▼ Units
-      </div> */}
-    </div>
-  ))}
+        <div class="edu-info">
+          <h3 class="m-0 py-2 font-bold text-xl md:text-2xl">{edu.degree}</h3>
+          <div>
+            <p class="text-[#aaa]">{edu.institution}</p>
+            <p class="text-[#aaa]">{edu.duration}</p>
+          </div>
+        </div>
+
+        {/* <div class="mt-auto py-2 text-[#aaa] cursor-pointer text-[0.95rem] hover:text-[#fff] transition-colors duration-300 self-end ml-auto">▼ Units</div> */}
+      </div>
+    ))
+  }
 </div>

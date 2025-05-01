@@ -1,35 +1,54 @@
 ---
 const projects = [
-    {
-        title: "1.5fa Demo",
-        description: "This project has implementations of two kinds of authentication methods. The first is a traditional username/password form with a email 2FA code. The second is a QR code based authentication method which relies on a secondary device (typically a users phone) to be authenticated.",
-        link: "https://github.com/Sterling-Miller/1.5fa-demo"
-    },
-    {
-        title: "DogLog",
-        description: "DOGLOG is a web application that allows users to track their dog's health and wellness. Users can log their dog's bathroom habbits, meals, and exercise. The application provides a map to see where your dog has logged events as well as a list view to see all events. We have a profile page that allows users to see their dog's information and update it. Also on the profile page, users can see their dog's wellness statistics and earn achievements for logging events.",
-        link: "https://github.com/leoschonberger/doglog-new"
-    }
+  {
+    title: "Streamlining 2FA",
+    description:
+      "Streamlining 2FA is a web application designed to showcase secure authentication methods, including traditional email/password login with two-factor authentication (2FA) and QR code-based login. Built using Next.js, Drizzle ORM, and Neon Postgres, it provides a seamless user experience for managing authentication workflows. The app features secure token generation, email-based 2FA, and QR code scanning for quick access. With a focus on modern security practices, it aims to demonstrate a new approach to user authentication.",
+    link: "https://github.com/Sterling-Miller/1.5fa-demo",
+  },
+  {
+    title: "DogLog",
+    description:
+      "DogLog is a web application designed to help dog owners track and manage their pets' activities, such as restroom breaks, meals, and exercise. Built using React, Vite, and Firebase, it provides an intuitive interface for logging events, viewing activity history, and monitoring statistics for multiple dogs. The app also includes features like achievements, map-based pin tracking, and user authentication, aiming to enhance the pet care experience by offering a centralized platform.",
+    link: "https://github.com/leoschonberger/doglog-new",
+  },
 ];
+
+const git_icon = {
+  title: "GitHub",
+  viewbox: "0 0 496 512",
+  icon: "M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z",
+};
+
+const images = [{}];
 ---
 
-<div class="max-w-3xl mx-auto p-4 font-sans leading-relaxed">
-    <h2 class="text-3xl font-bold mb-6">Projects</h2>
-    <div class="grid grid-cols-1 gap-6">
-        {projects.map(project => (
-            <div class="flex flex-grow bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px]">
-                <div>
-                    <h3 class="mb-2 font-semibold m-0 py-2 text-white">
-                        {project.title}
-                    </h3>
-                    <p class="text-[#aaa] text-sm mb-4">
-                        {project.description}
-                    </p>
-                    <a href={project.link} target="_blank" class="mt-auto py-2 text-[#aaa] text-sm cursor-pointer hover:text-[#fff] transition-colors duration-300">
-                        Learn More
-                    </a>
-                </div>
-            </div>
-        ))}
-    </div>
+<div class="max-w-4xl mx-auto p-4 font-sans leading-relaxed">
+  <h2 class="text-3xl font-bold mb-6">Projects</h2>
+  <div class="grid grid-cols-1 gap-6">
+    {
+      projects.map((project) => (
+        <div class="flex flex-grow bg-[#1e1e1e] p-4 border-l-2 border-[#3f3f3f] rounded-[10px]">
+          <div>
+            <h3 class="text-xl font-semibold">{project.title}</h3>
+            <p class="text-[#aaa] text-sm mb-4">{project.description}</p>
+            <a
+              href={project.link}
+              target="_blank"
+              class="mt-auto py-2 text-[#aaa] text-sm cursor-pointer hover:text-[#fff] transition-colors duration-300 flex items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox={git_icon.viewbox}
+                class="w-4 h-4 mr-2 fill-current"
+              >
+                <path d={git_icon.icon} />
+              </svg>
+              Github Repository
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </div>

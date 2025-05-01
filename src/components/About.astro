@@ -1,6 +1,7 @@
 ---
 const aboutMe = {
-  introduction: "I'm a soon-to-be graduate from the University of Oregon, earning a Bachelor of Science in Computer Science with a minor in Psychology. I'm passionate about software development and eager to apply my skills to real-world challenges in the tech industry.",
+  introduction:
+    "I'm a soon-to-be graduate from the University of Oregon, earning a Bachelor of Science in Computer Science with a minor in Psychology. I'm passionate about software development and eager to apply my skills to real-world challenges in the tech industry.",
   skills: {
     languages: ["Python", "C", "C++", "JavaScript", "TypeScript"],
     frameworks: ["Next.js", "Astro", "Tailwind CSS", "Flask"],
@@ -18,58 +19,44 @@ const aboutMe = {
 ---
 
 <!-- About Me Component -->
-<div class="max-w-3xl mx-auto p-4 font-sans leading-relaxed">
+<div class="max-w-4xl mx-auto p-4 font-sans leading-relaxed">
   <h1 class="text-3xl font-bold mb-6">About Me</h1>
-  <p class="mb-6">
-    {aboutMe.introduction}
-  </p>
+  <p class="mb-6">{aboutMe.introduction}</p>
   <h1 class="text-3xl font-bold mb-6">Skills & Interests</h1>
   <li class="list-none mb-2 font-semibold">Languages:</li>
   <div class="flex flex-wrap gap-2 mb-4">
-    {aboutMe.skills.languages.map((tech) => (
-      <div class="languages text-blue-400 bg-blue-900 rounded-lg px-3 py-1 text-sm font-medium">
-        {tech}
-      </div>
-    ))}
+    {
+      aboutMe.skills.languages.map((tech) => (<div class="languages text-blue-400 bg-blue-900 rounded-lg px-3 py-1 text-sm font-medium">{tech}</div>))
+    }
   </div>
   <li class="list-none mb-2 font-semibold">Frameworks:</li>
   <div class="flex flex-wrap gap-2 mb-4">
-    {aboutMe.skills.frameworks.map((tech) => (
-      <div class="frameworks text-red-400 bg-red-900 rounded-lg px-3 py-1 text-sm font-medium">
-        {tech}
-      </div>
-    ))}
+    {
+      aboutMe.skills.frameworks.map((tech) => (<div class="frameworks text-red-400 bg-red-900 rounded-lg px-3 py-1 text-sm font-medium">{tech}</div>))
+    }
   </div>
   <li class="list-none mb-2 font-semibold">Backend:</li>
   <div class="flex flex-wrap gap-2 mb-4">
-    {aboutMe.skills.backend.map((tech) => (
-      <div class="backend text-green-400 bg-green-800 rounded-lg px-3 py-1 text-sm font-medium">
-        {tech}
-      </div>
-    ))}
+    {
+      aboutMe.skills.backend.map((tech) => (<div class="backend text-green-400 bg-green-800 rounded-lg px-3 py-1 text-sm font-medium">{tech}</div>))
+    }
   </div>
   <li class="list-none mb-2 font-semibold">Frontend:</li>
   <div class="flex flex-wrap gap-2 mb-4">
-    {aboutMe.skills.frontend.map((tech) => (
-      <div class="frontend text-purple-400 bg-purple-900 rounded-lg px-3 py-1 text-sm font-medium">
-        {tech}
-      </div>
-    ))}
+    {
+      aboutMe.skills.frontend.map((tech) => (<div class="frontend text-purple-400 bg-purple-900 rounded-lg px-3 py-1 text-sm font-medium">{tech}</div>))
+    }
   </div>
   <li class="list-none mb-2 font-semibold">Databases:</li>
   <div class="flex flex-wrap gap-2 mb-4">
-    {aboutMe.skills.databases.map((tech) => (
-      <div class="database text-yellow-400 bg-yellow-800 rounded-lg px-3 py-1 text-sm font-medium">
-        {tech}
-      </div>
-    ))}
+    {
+      aboutMe.skills.databases.map((tech) => (<div class="database text-yellow-400 bg-yellow-800 rounded-lg px-3 py-1 text-sm font-medium">{tech}</div>))
+    }
   </div>
   <li class="list-none mb-2 font-semibold">Other Areas of Experience:</li>
   <div class="flex flex-wrap gap-2">
-    {aboutMe.skills.other.map((tech) => (
-      <div class="other text-gray-400 bg-gray-800 rounded-lg px-3 py-1 text-sm font-medium">
-        {tech}
-      </div>
-    ))}
+    {
+      aboutMe.skills.other.map((tech) => (<div class="other text-gray-400 bg-gray-800 rounded-lg px-3 py-1 text-sm font-medium">{tech}</div>))
+    }
   </div>
 </div>
