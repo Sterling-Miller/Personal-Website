@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Profile from "../components/Profile.astro";
 import About from "../components/About.astro";
-import Education from "../components/Education.astro";
+import Profile from "../components/Profile.astro";
 import Projects from "../components/Projects.astro";
+import Education from "../components/Education.astro";
 import Experience from "../components/Experience.astro";
+import Credentials from "../components/Credentials.astro";
 import SkillsInterests from "../components/Skills-Interests.astro";
 
 export const prerender = true;
@@ -18,8 +19,9 @@ export const prerender = true;
   <div slot="right">
     <About />
     <Education />
-    <Projects />
     <SkillsInterests />
+    <Projects />
+    <Credentials />
     <Experience />
   </div>
 </Layout>
