@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const education = [
   {
     degree: "Bachelor of Science in Computer Science",
@@ -35,10 +37,13 @@ const course_work = [
     "
       >
         <div class="flex-shrink-0 w-[100px] h-[100px] mr-4 rounded-full overflow-hidden">
-          <img
+          <Image
             class="w-full h-full object-cover"
             src={edu.logo}
             alt={`${edu.institution} Logo`}
+            width={100}
+            height={100}
+            loading="eager"
           />
         </div>
 
