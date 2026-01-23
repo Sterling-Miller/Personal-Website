@@ -36,16 +36,21 @@ const profile = {
 ---
 
 <div>
-  <Image
-    class="image-profile"
-    src={profile.image}
-    alt={profile.name}
-    width={200}
-    height={200}
-    loading="eager"
-  />
+  <div class="relative">
+    <div class="circle-background"></div>
+    <Image
+      class="image-profile"
+      src={profile.image}
+      alt={profile.name}
+      width={200}
+      height={200}
+      loading="eager"
+    />
+  </div>
 
-  <h1 class="text-xl font-bold">{profile.name}</h1>
+  <style></style>
+
+  <h1>{profile.name}</h1>
   <p class="subtext">{profile.title}</p>
   <p class="subtext">{profile.location}</p>
   <div class="mt-4 flex gap-2 items-center">

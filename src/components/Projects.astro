@@ -26,19 +26,15 @@ const images = [{}];
 ---
 
 <div class="card-container">
-  <h2 class="heading-1">Projects</h2>
+  <h1 class="mb-4">Projects</h1>
   <div class="grid grid-cols-1 gap-6">
     {
       projects.map((project) => (
         <div class="card">
           <div>
-            <h3 class="heading-2">{project.title}</h3>
+            <h2>{project.title}</h2>
             <p class="text-[#aaa] my-4">{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              class="link"
-            >
+            <a href={project.link} target="_blank" class="link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox={git_icon.viewbox}
