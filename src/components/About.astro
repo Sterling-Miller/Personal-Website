@@ -4,9 +4,8 @@ import "../styles/global.css";
 const aboutMe = {
   introduction: [
     "Welcome! 👋🏽",
-    "I'm Sterling, a software engineer with a focus on creating user-friendly and efficient applications. I enjoy solving complex problems and appreciate the process of turning ideas into reality through code.",
-    "I have a strong foundation in web development, with experience in both front-end and back-end technologies. I enjoy working with modern frameworks and tools to create responsive and dynamic web applications.",
-    "I am excited about the future of technology, specifically machine learning, and how it can transform our future. I look forward to connecting with like-minded individuals and contributing to projects that push the boundaries of what is possible in software development.",
+    "I'm Sterling, a software engineer based in the San Francisco Bay Area and a graduate of the University of Oregon. My main focus has been on full-stack web development, building responsive, dynamic applications using modern frameworks and tools across both the front and back end.",
+    "I'm especially interested in artificial intelligence and how it’s shaping the future of software and look forward to connecting with others who are passionate about building impactful technology.",
   ],
 };
 ---
@@ -14,6 +13,6 @@ const aboutMe = {
 <div class="card-container">
   <h1 class="mb-4">About Me</h1>
   <div class="card">
-    {aboutMe.introduction.map((paragraph) => <p>{paragraph}</p>)}
+    {aboutMe.introduction.map((paragraph) => <p class="mb-2">{paragraph}</p>)}
   </div>
 </div>
